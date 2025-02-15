@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "node src/index.js",
+    "start": "node index.js",
     "dev": "nodemon src/index.js",
+    "build": "prisma generate",
     "postinstall": "prisma generate"
   },
   "keywords": [],
@@ -16,8 +16,6 @@
     "@prisma/client": "^6.3.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongodb": "^6.13.0",
-    "mongoose": "^8.9.7",
     "pg": "^8.13.3"
   },
   "devDependencies": {
