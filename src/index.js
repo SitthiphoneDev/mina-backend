@@ -8,8 +8,6 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-const host = 'localhost';
-
 
 app.use(express.json());
 
@@ -22,9 +20,8 @@ app.get('/', (req, res) => {
     res.send('API is running successfully');
 });
 
-// Start the server
-app.listen(Number(port), host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
+app.listen(port, () => {
+    console.log(`🚀 Server is running on port ${port} 🚀`);
 });
 
 module.exports = app;
