@@ -63,9 +63,6 @@ const unitController = {
         where: {
           unit_id: Number(id),
         },
-        include: {
-          product: true,
-        },
       });
       if (!unit) {
         return res.status(404).json({ error: 'Unit not found' });
