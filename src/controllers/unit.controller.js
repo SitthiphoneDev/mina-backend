@@ -42,9 +42,6 @@ const unitController = {
   getAll: async (req, res) => {
     try {
       const units = await prisma.unit.findMany({
-        include: {
-          product: true,
-        },
         orderBy: {
           updatedAt: 'desc'
         }
